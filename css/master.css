@@ -1,0 +1,341 @@
+:root {
+    --main-color: #070420;
+    --title-color: gold;
+    --hover-color: red;
+    --half-black: rgba(0, 0, 0, 0.5);
+    --half-white: rgba(255, 255, 255, 0.5);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    font-size: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Start Components */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.btn {
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: fit-content;
+    padding: .5rem 2rem;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.stroke-text {
+    -webkit-text-stroke-color: var(--second-color);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Start Header */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+    text-transform: capitalize;
+    color: var(--main-color);
+}
+
+.header-content .logo {
+    font-weight: 900;
+    font-size: 3rem;
+    font-family: serif;
+}
+
+@media (min-width: 768px) {
+    .header-content .right-h i {
+        display: none;
+    }
+}
+
+.header-content .right-h i {
+    font-size: 2rem;
+    cursor: pointer;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.bars:hover {
+    color: rgb(0, 151, 245);
+}
+
+.header-content .right-h .header-links {
+    display: flex;
+    gap: 2rem;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+@media (max-width: 768px) {
+    .header-content .right-h .header-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        min-height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .translate-x-100 {
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+.header-content .right-h .header-links .sidebar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.x-mark:hover {
+    color: red;
+}
+
+@media (min-width: 768px) {
+    .header-content .right-h .header-links .sidebar-logo {
+        display: none;
+    }
+}
+
+.header-content .right-h .header-links a {
+    color: var(--main-color);
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.header-content .right-h .header-links a:hover {
+    color: var(--hover-color);
+}
+
+/* End Header */
+
+/* Start Landing */
+.landing .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+    text-transform: capitalize;
+}
+
+.landing .row .landing-img {
+    width: 100%;
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.landing .row .new {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--main-color);
+    grid-area: 1 / 3 / 3 / 4;
+}
+
+.landing .row .new .title {
+    font-size: 1.5rem;
+    color: var(--title-color);
+}
+
+.landing .row .new p {
+    color: var(--half-white);
+    font-size: .75rem;
+    line-height: 1.5rem;
+}
+
+.landing .row .new h3 {
+    color: white;
+    cursor: pointer;
+    padding-bottom: 1rem;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.landing .row .new h3:hover {
+    color: var(--title-color);
+}
+
+.landing .row .new div:nth-child(2),
+.landing .row .new div:nth-child(3) {
+    border-bottom: 1px solid rgb(170, 170, 170);
+    padding-bottom: 2rem;
+}
+
+.landing .row .best-add {
+    font-size: 3.5rem;
+    font-weight: 900;
+    padding-right: 2rem;
+    color: var(--main-color);
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.landing .row .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: 2 / 2 / 3 / 3;
+    gap: 1rem;
+}
+
+.landing .row .desc p {
+    font-size: .9rem;
+    line-height: 1.5rem;
+    color: var(--half-black);
+}
+
+.landing .row .desc span {
+    background-color: var(--hover-color);
+}
+
+.landing .row .desc span:hover {
+    background-color: var(--main-color);
+}
+
+@media (max-width: 768px) {
+    .landing .row .landing-img {
+        grid-area: 1 / 1 / 2 / 4;
+    }
+
+    .landing .row .best-add {
+        grid-area: 2 / 1 / 3 / 4;
+    }
+
+    .landing .row .desc {
+        grid-area: 3 / 1 / 4 / 4;
+        margin-bottom: 3rem;
+    }
+
+    .landing .row .new {
+        grid-area: 4 / 1 / 5 / 4;
+
+    }
+}
+
+/* End Landing */
+
+/* Start Futures */
+.futures .items {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.futures .items .item {
+    width: calc((100% - 2rem) / 3);
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media(max-width: 992px) {
+    .futures .items .item {
+        width: 100%;
+    }
+}
+
+.futures .items .item img {
+    width: 30%;
+}
+
+.futures .items .item .desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.futures .items .item .desc span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.futures .items .item .desc h3 {
+    cursor: pointer;
+    font-weight: 900;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.futures .items .item .desc h3:hover {
+    color: var(--hover-color);
+}
+
+.futures .items .item .desc p {
+    color: #585858;
+}
+
+/* End Futures */
